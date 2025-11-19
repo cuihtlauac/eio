@@ -52,6 +52,12 @@
   (conf-bash :with-test)
   (fmt (>= 0.8.9))))
 (package
+ (name eio_unikraft)
+ (synopsis "Eio implementation for Unikraft systems")
+ (description "An Eio implementation for MirageOS on Unikraft")
+ (depends
+  (eio_posix (= :version))))
+(package
  (name eio_windows)
  (synopsis "Eio implementation for Windows")
  (description "An Eio implementation using OCaml's Unix.select")
