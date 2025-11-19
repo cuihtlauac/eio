@@ -10,7 +10,7 @@ doc: "https://ocaml-multicore.github.io/eio/"
 bug-reports: "https://github.com/ocaml-multicore/eio/issues"
 depends: [
   "dune" {>= "3.9"}
-  "eio_posix" {= version}
+  "eio_posix"
   "odoc" {with-doc}
 ]
 build: [

@@ -56,7 +56,7 @@
  (synopsis "Eio implementation for Unikraft systems")
  (description "An Eio implementation for MirageOS on Unikraft")
  (depends
-  (eio_posix (= :version))))
+  eio_posix))
 (package
  (name eio_windows)
  (synopsis "Eio implementation for Windows")
