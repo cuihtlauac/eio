@@ -10,6 +10,8 @@
 #else
 #include <sys/syscall.h>
 #endif
+#elif __has_include(<uk/config.h>)
+#include <sys/random.h>
 #endif
 #include <sys/uio.h>
 #include <sys/stat.h>
@@ -58,6 +60,8 @@ CAMLprim value caml_eio_posix_getrandom(value v_ba, value v_off, value v_len) {
 #else
     ret = syscall(SYS_getrandom, buf, len, 0);
 #endif
+#elif __has_include(<uk/config.h>)
+    ret = getrandom(buf, len, 0);
 #else
     arc4random_buf(buf, len);
     ret = len;
