@@ -11,7 +11,7 @@
 
 (rule
  (targets config.ml)
- (enabled_if (= %{os_type} "Unix"))
+ ; discover.exe runs on host; constants are POSIX-compatible for Unikraft
  (action (run ./include/discover.exe)))
 
 (rule
