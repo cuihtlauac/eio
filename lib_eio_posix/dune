@@ -1,7 +1,7 @@
 (library
  (name eio_posix)
  (public_name eio_posix)
- (enabled_if (= %{os_type} "Unix"))
+ ; enabled unconditionally: C stubs support both Unix and Unikraft
  (foreign_stubs
   (language c)
   (flags :standard -D_LARGEFILE64_SOURCE)
